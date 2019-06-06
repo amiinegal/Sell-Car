@@ -1,0 +1,97 @@
+{%extends "registration/base.html"%}
+{% load bootstrap4 %}
+{% block content %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/insta.css' %}">
+<link href="https://fonts.googleapis.com/css?family=Grand+Hotel" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+<div class="row">
+  <div class="col-md-6">
+      <a class="navbar-brand" href="{% url 'index' %}"><img src="{#}" style="height:700px;width:500px; margin: 80px;padding-top: 0px;padding-bottom: 30px;margin-top:2px; ">
+      </a>
+  </div>
+
+    <!-- Empty div -->
+    <div class="col-md-4">
+      {% if form.errors %}
+        <p> Password or Username is incorrect </p>
+      {% endif %}
+      <div class="panel panel-default">
+          <a class="navbar-brand" href="{% url 'index' %}"><img src="{#}" style="height:100px;width:200px;"></a>
+      
+        <div class="panel-body">
+          <form  action="/accounts/login/" method="post">
+            {% csrf_token %}
+            {% bootstrap_form form%}
+
+            <div class="form-group">
+              <input type="submit" class="btn btn-primary btn-sm" value="Login">
+            </div>
+
+            <input type="hidden" name="next" value="{{next}}">
+
+          </form>
+        </div>
+        </div>
+        <div class="card-columns">
+            <a href="/accounts/register"><input type="submit" class="btn btn-primary btn-sm" value="sign up"></a> 
+            </div>
+__<div class="row">
+    <div class="col-md-3">
+        <a class="navbar-brand" href="{% url 'index' %}"><img src="{#}" style="height:100px;width:200px;"><img src="{#}" style="height:90px;width:200px;">
+        </a>
+      </div>
+    </div>
+      </div>
+    <!-- empty div -->
+  </div>
+<!-- Footer -->
+<footer class="page-footer font-small special-color-dark pt-4">
+
+    <!-- Footer Elements -->
+    <div class="container">
+  
+      <!-- Social buttons -->
+      <ul class="list-unstyled list-inline text-center">
+        <li class="list-inline-item">
+          <a class="btn-floating btn-fb mx-1">
+              <img src="">
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-tw mx-1">
+              <img src="">
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-gplus mx-1">
+              <img src="">
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-li mx-1">
+              <img src="">
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-dribbble mx-1">
+              <img src="">
+          </a>
+        </li>
+      </ul>
+      <!-- Social buttons -->
+  
+    </div>
+    <!-- Footer Elements -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+      <a href="https://www.instagram.com/amiin_egal/">amiin_egal </a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
+
+{% endblock %}
