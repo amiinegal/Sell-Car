@@ -15,14 +15,14 @@ def index(request):
 def profile(request):
     date = dt.date.today()
     current_user = request.user
-    profile = Profile.objects.get(user=current_user.id)
-    cars = Car.objects.all()
-    return render(request, 'profile/profile.html', {"date": date, "profile":profile,"cars":cars})
+    # profile = Profile.objects.get(user=current_user.id)
+    cars = Car.objects.all()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+    return render(request, 'profile/profile.html', locals() )#{"date": date, "profile":profile,"cars":cars})
 
 def edit_profile(request):
     date = dt.date.today()
     current_user = request.user
-    profile = Profile.objects.get(user=current_user.id)
+    #profile = Profile.objects.get(user=current_user.id)
     if request.method == 'POST':
         signup_form = EditForm(request.POST, request.FILES,instance=request.user.profile) 
         if signup_form.is_valid():
