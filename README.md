@@ -1,7 +1,7 @@
 ## Sell_Car
 
 ### Description
-
+A web app that enables an owner of a car to know the market value or rather sell his car by evaluation through providing us with some details of your car.
 ### Author
 _amin egal_
 
@@ -15,6 +15,12 @@ _amin egal_
            ``` pyhton3.6 manage.py server ```
 
 ### BDD
+| Behavior  | Input | Output  |
+|:-:|---|---|
+| login form  | user logs in with their credentials  |redirected to sign up   |
+| sign up form  | user signs up in with their credentials  | taken to the homepage  |
+| profile options  |user puts his bio and ptofile_pic   |  profile is displayed |
+| user displays his car  | car name and more details  | car is rated according to its market value  |
 
 ### Technologies Used
 * CSS.
