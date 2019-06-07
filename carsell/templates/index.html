@@ -1,5 +1,5 @@
 {%extends 'base.html'%}
-
+{% load static %}
 {% block content %}
     {{block.super}}
 <div style="text-align:center; padding-top: 130px; padding-bottom: 130px; background-image: url(https://images.pexels.com/photos/109361/pexels-photo-109361.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500);background-size:cover" class="container-fluid" id="moda">
@@ -63,7 +63,7 @@
                 </div>
                 <div class="modal-footer">
                     <h4>{{car.description}}</h4>
-                    <h5 class="gallery-item-likes"><span class="visually-hidden">Ratings:</span><i class="fas fa-heart" aria-hidden="true"></i> {{car.rating}}</h5>
+                    <h5 class="gallery-item-likes"><span class="btn btn-sm-primary">Ratings:</span><i class="fas fa-heart" aria-hidden="true"></i> {{car.rating}}</h5>
                 </div>
                 <br>
             <br>
@@ -71,6 +71,196 @@
             
         {% endfor%}
     </div>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+    
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+a:hover{
+    text-decoration:none;
+}
+
+.email {
+    background: url("https://images.pexels.com/photos/7070/space-desk-workspace-coworking.jpg?w=1260&h=750&auto=compress&cs=tinysrgb");
+    min-height: 200px;
+    padding: 70px 0px;
+    width:100%;
+}
+
+.email h2, .email p {
+    color: #FFF;
+    font-weight: 600;
+}
+
+#email-adresi {
+    margin-top: 20px;
+    width:50%;
+    height:40px;
+    padding-left:10px;
+}
+
+.footer {
+    padding:100px 0px;
+	color: #ccc;
+    background-color: #222;
+}
+
+.footer h3 {
+	color: #FFF;
+	font-size:15px;
+	font-weight: 600;
+	text-transform: uppercase;
+	margin-bottom:20px;
+}
+
+.footer ul {
+	font-size: 13px;
+	list-style-type: none;
+	margin-left: 0;
+	padding-left: 0;
+	margin-top: 15px;
+	color: #7F8C8D;
+}
+
+.footer ul li a {
+	padding: 10px 0px;
+    display: block;
+    color: #ccc;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.footer ul li a:hover{
+	color:#1e76a8;
+}
+
+.footer-bottom{
+	background-color: #111;
+    color: #282c2d;
+    font-size: 12px;
+	text-align: center;
+	height: 50px;
+    line-height: 50px;
+}
+
+.footer-bottom p{
+	font-size:13px;
+	color: #FFF;
+}
+
+.footer-top{
+	background-color: #f7f7f7;
+    text-align: center;
+}
+
+.footer-top .social-icons{
+   padding:50px 0px;
+}
+
+.footer-top .social-icons i{
+	padding:0px 20px;
+	font-size:20px;
+	color: #aaa;
+}
+
+.footer-top .social-icons i:hover{
+	color:#1e76a8;
+}
+
+.logo{
+   color:#FFF;
+   font-size:30px;
+   font-weight:600;
+}
+
+    </style>
+    
+    <!--
+        instagram: www.instagram.com/programmingtutorial
+        site: programlamadersleri.net
+    -->
+    
+    <div class="email">
+            <div class="container">
+                
+                <div class="row">
+                    <div class="col-lg-6 col-lg-offset-3 col-xs-12 text-center">
+                        <h2>SlGN UP</h2>
+                            
+                            <p></p>
+                            
+                            <form action="" method="post">
+                                <div class="input-prepend"><span class="add-on"><i class="icon-envelope"></i></span>
+                                    <input type="text" id="email-adresi" name="" placeholder="Enter your email adress...">
+                                </div>
+                                <br />
+                                <input type="submit" value="Sign Up !" class="btn btn-abone" style="padding: 12px 58px; border: none; text-align: center; background: #1e76a8; cursor: pointer; color: #FFF; margin: 10px 0px; font-weight: 600; font-size: 16px; cursor: pointer; border-radius: 50px;"/>
+                          </form>
+                    </div>
+                </div>
+                
+            </div>
+        </div>		
+        
+        <div class="footer-top">
+           <div class="container">
+              <div class="social-icons">
+                    <i class="icon fa fa-twitter"></i>
+                    <i class="icon fa fa-facebook"></i>
+                    <i class="icon fa fa-google-plus"></i>
+                    <i class="icon fa fa-instagram"></i>
+                    <i class="icon fa fa-pinterest"></i>
+                    <i class="icon fa fa-youtube-play"></i>
+               </div>
+           </div>
+        </div>  
+</div>
+<footer>
+    <div class="footer" id="footer">
+        <div class="container">
+           <div class="row">
+        
+            <div class="col-lg-3 col-xs-12">
+               <span class="logo">LOGO</span>
+            </div>
+            <div class="col-lg-3 col-xs-12">
+               <h3>MENU</h3>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="#">Board of Directors</a></li>
+                    <li><a href="#">Mission-Vision</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-xs-12">
+                <h3>CATEGORIES</h3>
+                <ul>
+                    <li><a href="#">Photo Gallery</a></li>
+                    <li><a href="#">Video Gallery</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Announcement</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-xs-12">
+                <h3>CONTACT</h3>
+                <ul>
+                    <li> <a href="#">Address</a> </li>
+                    <li> <a href="#">Phone</a> </li>
+                    <li> <a href="#">Fax</a> </li>
+                    <li> <a href="#">E-Mail</a> </li>
+                </ul>
+            </div>
+            
+         </div>
+      </div>
+    </div>
+</footer>
+
+<div class="footer-bottom">
+    <p>Copyright © 2019. All right reserved.</p>
 </div>
 
 {% endblock %}
